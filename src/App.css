@@ -1,0 +1,163 @@
+.dashboard {
+  min-height: 100vh;
+  background: #f1f5f9;
+}
+
+/* Header */
+.header {
+  background: linear-gradient(135deg, #1e40af, #6366f1);
+  color: white;
+  padding: 25px 4%;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.header-title {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.header-title h4 {
+  font-size: 26px;
+}
+
+.header-title p {
+  color: #dbeafe;
+  margin-top: 5px;
+}
+
+.header-content button {
+  color: #1e40af;
+}
+
+/* Main container */
+.main-container {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.section {
+  margin-bottom: 30px;
+}
+
+/* Stat cards */
+.stat-card {
+  height: 100%;
+  border-radius: 12px !important;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.05) !important;
+}
+
+.stat-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.stat-icon {
+  width: 50px;
+  height: 50px;
+  color: white;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.stat-icon svg {
+  font-size: 28px;
+}
+
+/* Filters */
+.filters {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 15px;
+  align-items: center;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.05);
+}
+
+/* Charts */
+.charts-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.chart-card {
+  border-radius: 12px !important;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.05) !important;
+  min-width: 0;
+}
+
+.chart-card .MuiCardContent-root {
+  padding: 22px;
+}
+
+/* Recent orders */
+.chart-card .MuiTableCell-head {
+  font-weight: bold;
+  background: #f8fafc;
+}
+
+.chart-card .MuiTableCell-root {
+  white-space: nowrap;
+}
+
+/* Footer */
+.footer {
+  background: #1e293b;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+/* Tablet */
+@media (max-width: 1000px) {
+  .filters {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .charts-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .header {
+    padding: 20px;
+  }
+
+  .header-content {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .header-title h4 {
+    font-size: 21px;
+  }
+
+  .filters {
+    grid-template-columns: 1fr;
+    padding: 15px;
+  }
+
+  .main-container {
+    padding-top: 20px;
+  }
+
+  .chart-card .MuiCardContent-root {
+    padding: 14px;
+  }
+}
